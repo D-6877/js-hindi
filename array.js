@@ -13,30 +13,30 @@ let myheros = ["shaktiman","nagraj"];
 const myarray2 = Array(1,2,3,4);
 
 
-// //method of array
-// myarray.push(6);        
-// myarray.push(7);   
+//method of array
+myarray.push(6);        
+myarray.push(7);   
 
-// myarray.pop();  
-// console.log(myarray);
+myarray.pop();  
+console.log(myarray);
 
-// myarray.unshift(9);     //add element the firt of the array using shift it is time consuming
-// myarray.shift();  
+myarray.unshift(9);     //add element the firt of the array using shift it is time consuming
+myarray.shift();  
 
-// console.log(myarray.includes(9)); // it ask the elemets is include or not its return the result is true or false
-// console.log(myarray);
+console.log(myarray.includes(9)); // it ask the elemets is include or not its return the result is true or false
+console.log(myarray);
 
-// console.log(myarray.indexOf(9));   // it ask the 9th index is exist or not it will be return -1 value
-// console.log(myarray.indexOf(3));
-
-
-// const newarray = myarray.join();  // it store the all element of the myarray which will be string form
-// console.log(myarray);         // it's type is array
-// console.log(newarray);        // it's type is string
-// console.log(typeof newarray);
+console.log(myarray.indexOf(9));   // it ask the 9th index is exist or not it will be return -1 value
+console.log(myarray.indexOf(3));
 
 
-//slice, splice method
+const newarray = myarray.join();  // it store the all element of the myarray which will be string form
+console.log(myarray);         // it's type is array
+console.log(newarray);        // it's type is string
+console.log(typeof newarray);
+
+
+// slice, splice method
   
 console.log("A", myarray);                //A [ 0, 1, 2, 3, 4, 5 ]
 const myarray1 = myarray.slice(1,3);     //range is not include it produce 1, 2
