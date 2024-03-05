@@ -62,26 +62,45 @@ const balance = 1000;
 
 const month =6;
 
-switch (month) {
-    case 1:
-        {
-        console.log("it is january!");
-        break;
-       }
+// switch (month) {
+//     case 1:
+//         {
+//         console.log("it is january!");
+//         break;
+//        }
         
-    case 2:
-        console.log("it is february!");
-        break;
-    case 3:
-        console.log("it is march!");
-        break;
+//     case 2:
+//         console.log("it is february!");
+//         break;
+//     case 3:
+//         console.log("it is march!");
+//         break;
 
-    default:
-        console.log("defalut case match!");
-        break;
-}
+//     default:
+//         console.log("defalut case match!");
+//         break;
+// }
 
 
 
+//Nullish Coalesing Operator(??)
+              //keyword----> null and undefined
+
+let val1;
+// val1 = 5 ?? 10;      // it print which is the first value 
+// val1= null ?? 10;    // and it is used to sefty thats why in this case null value not assign in the val1
+
+// val1 = undefined ?? 15   // in this case 15 can be replace any function
+
+console.log(val1);
+
+
+
+//teniary operator
+// condition ? true : false
+
+
+const iceteaprice = 100;
+iceteaprice <=80  ? console.log("less then 80")  : console.log("more then 80");
 
 
