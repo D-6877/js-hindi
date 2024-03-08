@@ -43,3 +43,24 @@ title.innerText    //----> it shows all content which is showing the web browser
 title.innerHTML    // ----> it shows all html content including all tags 
 
 
+
+document.getElementsByClassName("heading") //---> it access the content through the class name
+
+
+document.querySelector("h1");  // --> it is use  access  the first query which i  want here i want to access the h1.
+document.querySelector("h2");  // ---> it is the same 
+
+
+// access the id and class with quer selecter method
+document.querySelector("#title");  // access the id  which is write with the # symbol
+document.querySelector(".heading");  // access the class which is write with . symbol
+
+document.querySelector('input[type = "password"]');//   access the password which type is password
+
+document.querySelector("ul");   // it is access the unorder list like that
+myunorderlist.querySelector("li");
+
+const turngreen = myunorderlist.querySelector("li");  // to store the value of the li 
+turngreen.style.backgroundColor = "green";   //  perform the style operation in which the background color will be green
+turngreen.innerText;  // perform muliple operation
+turngreen.innerText = "four";  // change the value of the first list.
