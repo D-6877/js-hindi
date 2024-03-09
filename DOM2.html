@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM on youtube</title>
+</head>
+<body  style="background-color: #212121; color: #fff;">
+    
+</body>
+<script>
+
+
+    // create a element which may be div ,h1,p, etc which i want 
+    //const h1 = document.createElement("h1"); create a h1 
+    const div = document.createElement("div");
+    console.log(div);
+
+
+    div.className = "main";  // set a class name 
+    div.id = Math.round(Math.random() * 10+1);   // generate a random id ---> set the id 
+    
+
+    div.setAttribute("title","generated a title");
+    div.style.backgroundColor = "green";
+    div.style.padding = "12px";
+
+
+    // it is a 1st process to write the innertext
+    // div.innerHTML = "Hey i am Debsankar";
+
+    // all attribute set in the div but not showing in the web page
+    // that's why i have to attach with the web page
+
+    // 2nd process to write the inner text
+    const addtext = document.createTextNode("hey i am Debsankar");
+    div.appendChild(addtext);
+
+    //attach
+    document.body.appendChild(div);
+
+</script>
+</html>
