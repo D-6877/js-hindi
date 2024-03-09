@@ -1,0 +1,50 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM on youtube</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <div class="parent">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+    </div>
+</body>
+<script>
+   const parent =  document.querySelector(".parent");
+//    console.log(parent);
+//    console.log(parent.children);   // it is same as array   and it's help to find the child
+//    console.log(parent.children[1].textContent);
+   
+
+// print the inner hhtml of the parent
+    for(let i=0;i<parent.children.length;i++)
+    {
+        console.log(parent.children[i].innerHTML);
+    }
+
+    parent.children[1].style.color = "red";
+    // parent  ---> child find
+    // console.log(parent.firstElementChild);   // it is use to find the first child of the parent
+    // console.log(parent.lastElementChild);    // it is use to find the last child of the parent
+    
+
+    // child ---> parent find
+
+    const dayone =  document.querySelector(".day");
+    console.log(dayone);
+
+    // console.log(dayone.parentElement);//  it is used to find the parent element of the child
+    // console.log(dayone.nextElementSibling) // find next sibling
+
+    console.log("NODES: ",parent.childNodes);   // it is use to find the all child node of the parent
+
+    
+
+</script>
+</html>
