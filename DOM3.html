@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom on youtube</title>
+</head>
+<body style="background-color: #212121; color: white;">
+    <ul class="language">
+        <li>JavaScript</li>
+    </ul>
+</body>
+<script>
+
+    // list item add
+
+     function addlanguage(langName)
+     {
+        const li= document.createElement("li");
+        li.innerHTML = langName;
+        document.querySelector("ul").appendChild(li);
+     }
+
+     addlanguage("python");
+     addlanguage("typescript");
+
+     // it add the language at the end of the li actualy it traverse the tree it is a big problem
+     // every step it traverse the tree
+
+
+     //optimize way to add the element
+     function addOptiLanguage(langName) {
+        const li =document.createElement("li");
+        li.appendChild(document.createTextNode(langName));
+        document.querySelector(".language").appendChild(li);
+     }
+
+     addOptiLanguage("c++");
+     addOptiLanguage("go lang");
+
+     // edit the value 
+     const secondlang = document.querySelector("li:nth-child(2)");
+    //  secondlang.innerHTML = "Mojo";
+
+    //optimize way
+    const li = document.createElement("li");
+    li.textContent = "c";
+    secondlang.replaceWith(li);
+
+    // replace the first child with 
+    // const first = document.querySelector("li:nth-child(1)");
+    // first.innerHTML = "typescript";
+
+     // another method
+    const first = document.querySelector("li:nth-child(1)");
+    first.outerHTML = "<li>Typescript</li>"
+
+
+    // remove the element
+    const last  = document.querySelector("li:last-child");
+    last.remove();
+    
+    
+</script>
+</html>
