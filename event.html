@@ -1,0 +1,111 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Events</title>
+</head>
+<body style="background-color: #414141; color: aliceblue;" >
+    <h2> Amazing images</h2>
+    <div>
+      <ul  id="images">
+        <li> <img width="200px" id="photoshop" src="https://images.pexels.com/photos/19992969/pexels-photo-19992969/free-photo-of-a-woman-standing-in-front-of-an-old-building.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="photoshop"></li>
+        <li> <img width="200px" id="japan" src="https://images.pexels.com/photos/17400114/pexels-photo-17400114/free-photo-of-woman-posing-among-flowers.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt=""></li>
+        <li> <img width="200px" id="river" src="https://images.pexels.com/photos/20380077/pexels-photo-20380077/free-photo-of-a-black-and-white-photo-of-a-person-walking-along-a-pier.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" alt=""></li>
+        <li> <img width="200px" id="owl" src="https://images.pexels.com/photos/86596/owl-bird-eyes-eagle-owl-86596.jpeg?auto=compress&cs=tinysrgb&w=600" alt=""></li>
+        <li> <img width="200px" id="prayer" src="https://images.pexels.com/photos/1003917/pexels-photo-1003917.jpeg?auto=compress&cs=tinysrgb&w=600" alt=""></li>
+       
+        <li> <a style="color: aliceblue;" href="https:/www.google.com/" id="google">Google</a></li>
+      </ul>
+    </div>
+
+</body>
+<script>
+      // click event
+
+      
+   // attachEvent()   method
+   // jQuery--- on
+
+      // not best approach
+     //document.getElementById("owl").onclick = function(){}
+    //  document.querySelector("#owl").onclick = function(){
+    //   alert("owl cick");
+    //  }
+
+    
+   // type events   i have to learn for basic
+
+   //  * timestamp
+   //  * defalutPrevented
+   //  * target, toElement, srcElement, currentTarget
+   // clintX, clintY, screenX, screenY
+   // altkey, ctrlkey, shiftkey, keycode
+
+    // best approach
+    // syntax --> document.getElementById("#owl").addEventListener("click", function(e){} , false)
+   document.getElementById("owl").addEventListener( "click", function(e){
+      console.log(e);// return many event such as windows event and environment event and return the views 
+   }, false)
+
+   // event propagation
+   //      ---->  event bubbing    ---> most of the use case   ---> default value false
+   //      ----> event captcharing   ---> defalut value true
+
+
+   // it will run when i click any ul photo
+   document.getElementById("images").addEventListener("click" , function(e){
+    console.log(" click inside the ul");
+   }, false)
+
+
+   // it will run when i click the japan photo
+   document.getElementById("japan").addEventListener("click" , function(e){
+      console.log(" japan clicked! ");
+      e.stopPropagation();    // it is use the sop the propagations means if after print the japan clicked it stoped click inside the ul
+   }, false)
+
+
+
+   document.getElementById("google").addEventListener("click", function(e){
+    console.log(" google clicked");
+    e.stopPropagation();
+    e.preventDefault();
+    
+   }, false)
+
+
+
+   //simple project
+
+   // after click any photo this photo will hide
+
+   document.querySelector("#images").addEventListener("click",function(e){
+    // e.target---> print only the target     here the target is the src link of the image
+   // e.target.parentNode ---> it print the parent node here the parent node is list(li);
+
+
+    console.log(e.target.tagName);   // print the child tag name
+
+    if(e.target.tagName === "IMG"){
+      console.log(e.target.id);    // it print the id of the photo
+    let removeIt = e.target.parentNode;
+    removeIt.remove();
+
+    }
+
+
+
+    
+   })
+
+   // if i click on the google  then remove all the 
+   // because  parentNode of the parent(google)  is unorder list(ul)
+
+   //  that's why i have to stricktly check  
+
+
+   
+</script>
+</html>
