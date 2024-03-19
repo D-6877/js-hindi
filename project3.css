@@ -1,0 +1,35 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+body{
+    background-color: rgba(0, 0, 0, 0.678);
+}
+
+#banner{
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+}
+
+#clock{
+
+    height: 30px;
+    width: 150px;
+    border: 1px solid black ;
+    padding-left: 23px;
+    padding-top: 4px;
+    border-radius: 10px;
+  position: absolute;
+  top: 120px;
+  left: 45%;
+  background-color: rgba(255, 187, 0, 0.945);
+}
