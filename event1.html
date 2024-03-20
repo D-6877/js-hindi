@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+<h1>Debsankar Dhara</h1>
+<button id="stop">Stop</button>
+
+</body>
+<script>
+
+  // it is use to execute the function after 2 second  at a time
+  setTimeout(function(){
+    // console.log("Debsankar");
+  }, 2000)
+
+  //another method
+  const sayDebsankar = function(){
+    //console.log("Debsankar");
+  }
+// setTimeout(sayDebsankar, 2000);
+
+  const changetext = function(e){
+       document.querySelector("h1").innerHTML = "Hello world";
+  }
+
+  
+  const changeMe = setTimeout(changetext, 2000);
+ // clearTimeout(changeMe);  // it is used to clear object // it must take a reference
+
+
+ document.querySelector("#stop").addEventListener("click", function(e){
+  clearTimeout(changeMe);
+  console.log("Stopped");
+ })
+
+
+  // it is used to execute the function accroding to 2second(2000mili second) interval 
+
+</script>
+</html>
