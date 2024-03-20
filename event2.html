@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+<h1>Debsankar Dhara</h1>
+<button id="start">Start</button>
+<button id="stop">Stop</button>
+
+</body>
+<script>
+
+  let mydate = new Date();
+ 
+  setInterval(function(){
+   // console.log("Debsankar", );
+  },1000)
+
+  // another method
+  const saydate = function(str){
+    console.log(str);
+  }
+   
+  const intervalId =  setInterval(saydate, 2000, "hello"); //---> it exist third parameter
+  clearInterval(intervalId); // it take the reference 
+
+  document.querySelector("#start").addEventListener("click",function(e){
+       setInterval(saydate, 1000, "Debsankar");
+  })
+
+  
+
+
+</script>
+</html>
