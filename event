@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="DOM.css">
+</head>
+<body>
+
+    <!-- button on one click -->
+   <button id="btn1">click me!</button>
+
+   <!-- button click after 2 times -->
+   <button id="">click me 2 times!</button>
+
+    <div> this is a box</div>
+  <script src="test.js"></script>
+</body>
+</html>
+
+
+
+
+// JAVA SCRIPT CODE  EVEN HANDLING
+
+
+let btn1 = document.querySelector("#btn1");
+
+// btn1.onclick = ()=>{
+//     console.log(" btn is click");
+
+
+// }
+
+// let div= document.querySelector("div");
+// div.onmouseover=()=>{
+//     console.log("you are inside the div");
+// }
+
+// // event object
+// let btn2 = document.querySelector("#btn2");
+
+btn2.onclick =(evt)=>{
+    console.log(evt);
+    console.log(evt.type);
+    console.log(evt.target);
+    console.log(evt.clientX);
+    console.log(evt.clientY);
+
+}
+
+// event listeners   
+
+
+btn1.addEventListener("click", function(event){
+  
+    console.log(event);
+    console.log(event.type);
+    console.log(event.target);
+})
+
+let div =  document.querySelector("div");
+
+
+btn1.addEventListener("click", function(){
+    console.log("btn1 is clicked -Handler1");
+})
+
+
+btn1.addEventListener("click", function(){
+    console.log("btn1 is clicked -Handler2");
+})
+
+const handler3 =  function(){
+    console.log("btn1 is clicked -Handler3");
+}
+
+
+// btn1.addEventListener("click", function(){
+//     console.log("btn1 is clicked -Handler3");
+// })
+
+btn1.addEventListener("click", function(){
+    console.log("btn1 is clicked -Handler4");
+})
+
+
+
+btn1.removeEventListener("click", handler3)
