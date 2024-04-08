@@ -52,6 +52,8 @@ const max =20;
 console.log(Math.floor(Math.random() * (max-min+1) +min ));    //minimum value generate range between 10 to 20 formula
 
 
+// another method
+console.log(Math.floor(Math.random()*11);  // because the number range is 10 to 20 in range 11 number is lying 
 
 
 
