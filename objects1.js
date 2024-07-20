@@ -26,7 +26,21 @@ const regularuser = {
 
 // //optional chaining ---> it means the key is exist or not
 // console.log(regularuser.fullname?.user_fullname.firstname);    // it means the fullname is exist or not if exist then follow the instruction
+const person = {
+  name: "Alice",
+  address: {
+    city: "New York"
+  }
+};
 
+// Without optional chaining
+let city = undefined;
+if (person && person.address && person.address.city) {
+  city = person.address.city;
+}
+
+// With optional chaining
+const city = person?.address?.city;
 
 // merging two object
 
