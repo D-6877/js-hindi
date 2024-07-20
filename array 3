@@ -1,0 +1,57 @@
+
+let arr= [45, 23, 21];
+
+//map or for each loop bot are similar function
+
+// for each loop is used to perform any task on the array but it is doesn't create a new loop
+arr.forEach((value)=>{
+    //console.log(value);
+})
+
+
+//Array map method
+
+// map is used to perform any operation on the array but it is create new array and it has additional arguments such as callback function, index, array inside the callback function
+let a = arr.map((value,index, array)=>{
+    // console.log(value, index, array);
+    // return value+1;
+    return  value+index;
+})
+
+// console.log(a);
+
+
+
+//Array filter method
+//filter method returns the array on the basis on condition but it doesnot change the original array
+let arr2 = [45,23,21,0,3,5];
+
+ let a2 = arr2.filter((a)=>{
+    return a<10
+})
+
+// console.log(a2);
+
+
+//Array reduce method
+//in this method we will see the sum of the array element  and it store into the newArray
+
+// this method return just a value
+
+let arr3 = [1, 2,3,4,4, 5,1];
+
+let newArray = arr3.reduce((h1,h2)=>{ 
+     return  h1+h2;
+})
+
+console.log(newArray);   // output of this array is 20 
+
+// it is a one type of method to imeplement a array.reduce method
+
+// const reduce_fuction =  (h1, h2)=>{
+//     return h1+h2;
+// }
+
+
+// let newArray2 = arr3.reduce(reduce_fuction);
+// console.log(newArray2);
