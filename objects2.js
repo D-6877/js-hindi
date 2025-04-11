@@ -5,7 +5,10 @@ const course ={
     teacher:"hitesh"
 }
 
-const {teacher} = course;    // it is a method to accsess the value of the course
+
+//de structuring 
+// const teacher = course.teacher;  
+const {teacher} = course;    // both are representing the same thing 
 
 console.log(teacher);
 
