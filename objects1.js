@@ -141,3 +141,18 @@ copy.user.name = "Not Eve";
 console.log(obj.user.name); // "Not Eve" 😬
 
 
+
+//simple example
+const myObject = {
+    name:"Debsankar",
+    age:21
+}
+
+name = "Modon";
+age=22;
+
+const newObject = {...myObject, name, age };
+
+console.log(newObject);
+
+
